@@ -3,9 +3,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: var(--gap-1);
 
   @media screen and (min-width: 1001px) {
     flex-direction: row;
+    padding: 5rem;
   }
 }
 

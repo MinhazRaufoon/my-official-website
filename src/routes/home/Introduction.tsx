@@ -1,5 +1,3 @@
-import PosterSection from "../../components/PosterSection"
-import secBg1 from "../../assets/images/sec-bg1.jpg"
 import styles from "./Introduction.module.scss"
 import Poster from "../../components/Poster"
 
@@ -16,17 +14,15 @@ export default function Introduction(props: Props) {
     photos[Math.floor(Math.random() * photos.length)]
 
   return (
-    <PosterSection imgSrc={secBg1}>
-      <div className={styles.intro}>
-        <section className={styles.photoContainer}>
-          <Poster className={styles.poster} src={randomizedPhoto} />
-        </section>
+    <section className={`${styles.intro} atLeastFullHeight`}>
+      <section className={styles.photoContainer}>
+        <Poster className={styles.poster} src={randomizedPhoto} />
+      </section>
 
-        <article className={styles.aboutMe}>
-          <h1>{subtitle}</h1>
-          <p dangerouslySetInnerHTML={{ __html: summary }}></p>
-        </article>
-      </div>
-    </PosterSection>
+      <article className={styles.aboutMe}>
+        <h1>{subtitle}</h1>
+        <p dangerouslySetInnerHTML={{ __html: summary }}></p>
+      </article>
+    </section>
   )
 }

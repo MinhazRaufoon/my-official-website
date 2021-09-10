@@ -35,22 +35,3 @@
     height: 1.5rem;
   }
 }
-
-.qualificationSection {
-  @media screen and (min-width: 950px) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  ul {
-    list-style-type: none;
-
-    @media screen and (min-width: 950px) {
-      list-style-type: square;
-    }
-  }
-
-  article {
-    padding: 3rem;
-  }
-}

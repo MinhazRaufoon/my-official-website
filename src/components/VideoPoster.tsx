@@ -12,6 +12,7 @@ export default function VideoPoster({ className, src }: Props) {
     <div className={`${styles.VideoPoster} ${className}`}>
       {isYoutubeLink && (
         <iframe
+          allow="fullscreen"
           title="Youtube link"
           src={src}
           data-testid="youtube-video-elem"
